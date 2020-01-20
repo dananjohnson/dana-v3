@@ -1,0 +1,20 @@
+{
+  "name": "dana-v3",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Dana Johnson <dana@danajohnson.co>",
+  "license": "CC-BY-4.0",
+  "private": false,
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "run-s clean dev:*",
+    "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "build": "run-s clean prod:*",
+    "prod:eleventy": "ELEVENTY_ENV=production eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "luxon": "^1.22.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

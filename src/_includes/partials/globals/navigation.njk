@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+    {% for item in collections.nav %}
+      <li>
+        <a href="{{ item.url | url }}"{% if item.url == page.url %} aria-describedby="current-page"{% endif %}>
+          {{ item.data.title }}
+        </a>
+      </li>
+    {% endfor %}
+    {% if site.author.github %}
+      <li>
+        <a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer">
+          Github
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

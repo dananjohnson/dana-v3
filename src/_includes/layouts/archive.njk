@@ -1,0 +1,7 @@
+{% extends "./base.njk" %}
+
+{% set postList = collections[collection] if collections[collection] else collections.posts %}
+
+{% block content %}
+  {% include "partials/components/postList.njk" %}
+{% endblock %}

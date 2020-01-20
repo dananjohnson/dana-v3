@@ -1,0 +1,20 @@
+{
+  "title": "Dana Johnson",
+  "subtitle": "",
+  "description": "Frontend Developer with design opinions. Building flexible, purposeful, enduring interfaces. Experimenting with minimal, sustainable tools for creating and sharing knowledge on the open web.",
+  "url": "https://www.danajohnson.co",
+  "baseUrl": "",
+  "repository": "https://github.com/dananjohnson/dana-v3",
+  "typekit": "hhy2otg",
+  "micropub_endpoint": "https://indiekit-danajohnson-co.herokuapp.com",
+  "author": {
+    "name": "Dana Johnson",
+    "url": "https://www.danajohnson.co",
+    "email": "dana@danajohnson.co",
+    "github": "https://github.com/dananjohnson/"
+  },
+  "license": {
+    "title": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

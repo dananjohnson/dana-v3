@@ -1,0 +1,10 @@
+{% if postList.length %}
+  {% for item in postList %}
+    <article>
+      <header>
+        <a href="{{ item.url }}"><h2>{{ item.data.title }}</h2></a>
+        <time datetime="{{ page.date | w3Date }}">{{ page.date | displayDate }}</time>
+      </header>
+    </article>
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include "partials/globals/head/index.njk" %}
+
+  <body>
+    {% include "partials/globals/header.njk" %}
+    <main id="#main" role="main">
+      {% block content %}
+      {% endblock %}
+    </main>
+    {% include "partials/globals/footer.njk" %}
+  </body>
+</html>
