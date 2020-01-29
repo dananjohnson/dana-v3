@@ -1,5 +1,7 @@
 const w3DateFilter = require('./src/filters/w3-date.js');
 const displayDateFilter = require('./src/filters/display-date.js');
+const markdownIt = require("markdown-it");
+const markdownItAbbr = require("markdown-it-abbr");
 
 module.exports = function(config) {
   // Filters
@@ -10,6 +12,12 @@ module.exports = function(config) {
   config.addLayoutAlias('page', 'layouts/page.njk');
   config.addLayoutAlias('post', 'layouts/post.njk');
   config.addLayoutAlias('archive', 'layouts/archive.njk');
+
+  config.addPassthroughCopy("src/assets/images");
+
+  // Customize markdown parsing
+  const markdownLib = markdownIt({}).use(markdownItAbbr);
+  config.setLibrary("md", markdownLib);
 
   // Custom collections
   const now = new Date();
