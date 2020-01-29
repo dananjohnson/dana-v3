@@ -2,6 +2,7 @@ const w3DateFilter = require('./src/filters/w3-date.js');
 const displayDateFilter = require('./src/filters/display-date.js');
 const markdownIt = require("markdown-it");
 const markdownItAbbr = require("markdown-it-abbr");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(config) {
   // Filters
@@ -14,6 +15,8 @@ module.exports = function(config) {
   config.addLayoutAlias('archive', 'layouts/archive.njk');
 
   config.addPassthroughCopy("src/assets/images");
+
+  config.addPlugin(syntaxHighlight);
 
   // Customize markdown parsing
   const markdownLib = markdownIt({}).use(markdownItAbbr);
