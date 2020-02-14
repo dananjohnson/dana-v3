@@ -30,6 +30,12 @@ module.exports = function(config) {
       ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
     ].reverse();
   });
+  const liveNotes = note => note.date <= now && !note.data.draft;
+  config.addCollection('notes', collection => {
+    return [
+      ...collection.getFilteredByGlob('./src/notes/*.md').filter(liveNotes)
+    ].reverse();
+  });
 
   return {
     dir: {
