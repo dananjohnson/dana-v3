@@ -1,47 +1,58 @@
-const w3DateFilter = require('./src/filters/w3-date.js');
-const displayDateFilter = require('./src/filters/display-date.js');
+const path = require("path");
 const markdownIt = require("markdown-it");
 const markdownItAbbr = require("markdown-it-abbr");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const SyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const ErrorOverlay = require("eleventy-plugin-error-overlay");
 
-module.exports = function(config) {
+const filters = require("./lib/filters");
+const shortcodes = require("./lib/shortcodes");
+const collections = require("./lib/collections");
+
+const manifestPath = path.resolve(__dirname, "dist/assets/manifest.json");
+
+module.exports = function (config) {
   // Filters
-  config.addFilter("w3Date", w3DateFilter);
-  config.addFilter("displayDate", displayDateFilter);
+  config.addFilter("w3Date", filters.w3Date);
+  config.addFilter("displayDate", filters.displayDate);
 
   // Layout aliases
-  config.addLayoutAlias('page', 'layouts/page.njk');
-  config.addLayoutAlias('post', 'layouts/post.njk');
-  config.addLayoutAlias('archive', 'layouts/archive.njk');
+  config.addLayoutAlias("page", "layouts/page.njk");
+  config.addLayoutAlias("post", "layouts/post.njk");
+  config.addLayoutAlias("archive", "layouts/archive.njk");
 
+  // Shortcodes
+  config.addNunjucksAsyncShortcode("webpack", shortcodes.webpack);
+
+  // Pass-through
   config.addPassthroughCopy("src/assets/images");
 
-  config.addPlugin(syntaxHighlight);
+  // Plugins
+  config.addPlugin(SyntaxHighlight);
+  config.addPlugin(ErrorOverlay);
+
+  // Custom collections
+  config.addCollection("posts", collections.posts);
+  config.addCollection("notes", collections.notes);
 
   // Customize markdown parsing
   const markdownLib = markdownIt({}).use(markdownItAbbr);
   config.setLibrary("md", markdownLib);
 
-  // Custom collections
-  const now = new Date();
-  const livePosts = post => post.date <= now && !post.data.draft;
-  config.addCollection('posts', collection => {
-    return [
-      ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
-    ].reverse();
-  });
-  const liveNotes = note => note.date <= now && !note.data.draft;
-  config.addCollection('notes', collection => {
-    return [
-      ...collection.getFilteredByGlob('./src/notes/*.md').filter(liveNotes)
-    ].reverse();
+  // Browsersync config
+  config.setBrowserSyncConfig({
+    ...config.browserSyncConfig,
+    // Reload when manifest file changes
+    files: [manifestPath],
+    // Speed/clean up build time
+    ui: false,
+    ghostMode: false,
   });
 
   return {
     dir: {
       input: "src",
-      output: "dist"
+      output: "dist",
     },
-    markdownTemplateEngine : "njk"
+    markdownTemplateEngine: "njk",
   };
 };
