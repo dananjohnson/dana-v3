@@ -1,0 +1,14 @@
+<article>
+  <header>
+	<a href="{{ item.url }}"><h2>{{ item.data.title }}</h2></a>
+	<time datetime="{{ item.date | w3Date }}">{{ item.date | displayDate }}</time>
+  </header>
+  {% if item.data.excerpt %}
+    <p>
+      {{ item.data.excerpt }}…
+      <a href="{{ item.url }}" tabindex="-1">continue reading</a>.
+    </p>
+  {% else %}
+    <div>{{ item.templateContent | safe }}</div>
+  {% endif %}
+</article>

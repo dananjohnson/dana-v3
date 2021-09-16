@@ -1,10 +1,8 @@
 {% extends "./base.njk" %}
 
 {% block content %}
-<article>
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
-  <div>{{ content | safe }}</div>
-</article>
+<header>
+  <h1>{{ title }}</h1>
+</header>
+<div>{{ content | safe }}</div>
 {% endblock %}

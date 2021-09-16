@@ -10,8 +10,6 @@ const outputPath = "./dist/assets";
 
 const isDev = process.env.NODE_ENV !== "production";
 
-console.log(process.env.NODE_ENV);
-
 const cssRule = {
   test: /\.css$/i,
   use: [
@@ -32,7 +30,7 @@ const cssRule = {
             }),
             postcssNormalize(),
             postcssPresetEnv({
-              stage: 2,
+              stage: 3,
             }),
           ],
         },

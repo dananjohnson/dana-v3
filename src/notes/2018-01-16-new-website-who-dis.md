@@ -2,7 +2,7 @@
 title: New website, who dis?
 ---
 
-I first launched [my personal website]({{ site.url }}) two and a half years ago. It was the first website I’d ever created from scratch, and I built it in plain old HTML, CSS, and JS to learn as much as I could about web development. No templates, no databases, no Bootstrap. I’d recently made the commitment to become a full-time freelance designer, and I needed to figure out what the hell I was doing!
+I first launched my personal website two and a half years ago. It was the first website I’d ever created from scratch, and I built it in plain old HTML, CSS, and JS to learn as much as I could about web development. No templates, no databases, no Bootstrap. I’d recently made the commitment to become a full-time freelance designer, and I needed to figure out what the hell I was doing{% endExcerpt %}!
 
 Fast forward to the start of 2018 and so much has happened since then. I’m still standing as a freelancer, which is an accomplishment in and of itself. Moeko and I started [Sloop Creative](http://www.sloopcreative.com/) in 2016, and have been providing non-profits and small businesses with thoughtful, vibrant design and illustration work since. I designed a bunch of [print publications](/projects/print-publications/) and [book covers](/projects/book-covers). I built an open access [online repository](/projects/apadana/) for a 2,000-page translation of early Buddhist poetry. I experimented with a novel approach to [documenting recipes for breadbaking](/projects/breadbaking/).
 

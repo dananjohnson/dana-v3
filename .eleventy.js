@@ -18,13 +18,10 @@ module.exports = function (config) {
   // Layout aliases
   config.addLayoutAlias("page", "layouts/page.njk");
   config.addLayoutAlias("post", "layouts/post.njk");
-  config.addLayoutAlias("archive", "layouts/archive.njk");
 
   // Shortcodes
   config.addNunjucksAsyncShortcode("webpack", shortcodes.webpack);
-
-  // Pass-through
-  config.addPassthroughCopy("src/assets/images");
+  config.addNunjucksAsyncShortcode("image", shortcodes.image);
 
   // Plugins
   config.addPlugin(SyntaxHighlight);
@@ -33,6 +30,7 @@ module.exports = function (config) {
   // Custom collections
   config.addCollection("posts", collections.posts);
   config.addCollection("notes", collections.notes);
+  config.addCollection("screenshots", collections.screenshots);
 
   // Customize markdown parsing
   const markdownLib = markdownIt({}).use(markdownItAbbr);
@@ -46,6 +44,13 @@ module.exports = function (config) {
     // Speed/clean up build time
     ui: false,
     ghostMode: false,
+  });
+
+  // Frontmatter
+  config.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: "{% endExcerpt %}",
+    excerpt_alias: "excerpt",
   });
 
   return {

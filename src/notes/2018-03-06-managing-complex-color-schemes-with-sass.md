@@ -2,7 +2,7 @@
 title: Managing complex color schemes with Sass
 ---
 
-Designing for print, as I often do, means having nearly total control over the look of each component. When the pieces of the design don’t quite fit, they can be tweaked individually to work. Each layout can be fully art-directed. This isn’t the case when building Web interfaces. (Or at least shouldn’t be — you could, I suppose, write CSS with properties for elements like `#my-one-of-a-kind-div-26` or `.is-four-columns-wide-and-comes-before-an-img-but-not-a-figure`.) Art direction on the Web has come a long way, but front-end development remains fundamentally a practice of defining the rules and letting the chips fall where they may. And that’s fine: it pushes us to think about design modularly, with benefits for maintenance, performance, and design coherence. And for perfectionists like myself, it releases us from endlessly pushing elements around on a page to find the perfect layout.
+Designing for print, as I often do, means having nearly total control over the look of each component. When the pieces of the design don’t quite fit, they can be tweaked individually to work. Each layout can be fully art-directed. This isn’t the case when building Web interfaces{% endExcerpt %}. (Or at least shouldn’t be — you could, I suppose, write CSS with properties for elements like `#my-one-of-a-kind-div-26` or `.is-four-columns-wide-and-comes-before-an-img-but-not-a-figure`.) Art direction on the Web has come a long way, but front-end development remains fundamentally a practice of defining the rules and letting the chips fall where they may. And that’s fine: it pushes us to think about design modularly, with benefits for maintenance, performance, and design coherence. And for perfectionists like myself, it releases us from endlessly pushing elements around on a page to find the perfect layout.
 
 ---
 
@@ -36,7 +36,8 @@ First, we create a mixin that takes an array of color codes and iterates through
       }
       @if $i == $len {
         $tertiary-color: nth($colors, 2);
-      } @elseif $i == $len - 1 {
+      }
+      @elseif $i == $len - 1 {
         $tertiary-color: nth($colors, 1);
       } @else {
         $tertiary-color: nth($colors, $i + 2);
@@ -72,7 +73,8 @@ Below the loop, we create a series of placeholder selectors for whichever CSS pr
       }
       @if $i == $len {
         $tertiary-color: nth($colors, 2);
-      } @elseif $i == $len - 1 {
+      }
+      @elseif $i == $len - 1 {
         $tertiary-color: nth($colors, 1);
       } @else {
         $tertiary-color: nth($colors, $i + 2);
@@ -112,14 +114,14 @@ Below the loop, we create a series of placeholder selectors for whichever CSS pr
       $pattern-hex: str-slice("#{$primary-color}", 2);
 
       .zig-zag {
-        background-image: url('patterns/zig-zag-#{$pattern-hex}.svg');
+        background-image: url("patterns/zig-zag-#{$pattern-hex}.svg");
       }
     }
   }
 }
 ```
 
-Placeholders are powerful selectors that allow you to create styles for classes without having to generate these selectors directly in your final CSS. So you can create a placeholder like `%color-primary`, and apply it to as many classes and IDs as you like using `@extend %color-primary`. You’ll notice also that I’m also using `str-slice` and interpolation to display a pattern as `background-image` based on  `$primary-color`. We just need to name our image files using the appropriate hex codes.
+Placeholders are powerful selectors that allow you to create styles for classes without having to generate these selectors directly in your final CSS. So you can create a placeholder like `%color-primary`, and apply it to as many classes and IDs as you like using `@extend %color-primary`. You’ll notice also that I’m also using `str-slice` and interpolation to display a pattern as `background-image` based on `$primary-color`. We just need to name our image files using the appropriate hex codes.
 
 With our dynamic-palette-generating mixin in place, we can define our colors for each chapter. You can add as many colors as you want per chapter; the mixin will loop back to the beginning at the end of the array.
 
@@ -127,28 +129,28 @@ With our dynamic-palette-generating mixin in place, we can define our colors for
 $chapter-themes: (
   chapters: (
     chapter-1: (
-      color-1:        #FD541D,
-      color-2:        #5ECCB9,
-      color-3:        #004B8D,
-      color-4:        #FFB3DD
+      color-1: #fd541d,
+      color-2: #5eccb9,
+      color-3: #004b8d,
+      color-4: #ffb3dd,
     ),
     chapter-2: (
-      color-1:        #CE4A7E,
-      color-2:        #DDA71F,
-      color-3:        #167A95,
-      color-4:        #96DB2B
+      color-1: #ce4a7e,
+      color-2: #dda71f,
+      color-3: #167a95,
+      color-4: #96db2b,
     ),
     chapter-3: (
-      color-1:        #167A95,
-      color-2:        #5ECCB9,
-      color-3:        #CE4A7E
+      color-1: #167a95,
+      color-2: #5eccb9,
+      color-3: #ce4a7e,
     ),
     chapter-4: (
-      color-1:        #DDA71F,
-      color-2:        #004B8D,
-      color-3:        #FD541D
-    )
-  )
+      color-1: #dda71f,
+      color-2: #004b8d,
+      color-3: #fd541d,
+    ),
+  ),
 );
 ```
 
@@ -156,7 +158,9 @@ You’ll see that we’ve defined our colors using Sass’s [maps](https://sass-
 
 ```scss
 @each $chapter in map-keys(map-get($chapter-themes, chapters)) {
-  $color-palette: map-values(map-get(map-get($chapter-themes, chapters), $chapter));
+  $color-palette: map-values(
+    map-get(map-get($chapter-themes, chapters), $chapter)
+  );
 
   main##{$chapter} {
   }
@@ -167,7 +171,9 @@ Since we want our color scheme to shuffle per section in each chapter, we call o
 
 ```scss
 @each $chapter in map-keys(map-get($chapter-themes, chapters)) {
-  $color-palette: map-values(map-get(map-get($chapter-themes, chapters), $chapter));
+  $color-palette: map-values(
+    map-get(map-get($chapter-themes, chapters), $chapter)
+  );
 
   main##{$chapter} {
     .section {
@@ -206,20 +212,20 @@ In Chapter 1, for instance, the compiled CSS would then yield something like thi
   background-blend-mode: multiply;
 }
 
-main#chapter-1 .section:nth-of-type(4n+2) .fact {
-  background-color: #004B8D;
+main#chapter-1 .section:nth-of-type(4n + 2) .fact {
+  background-color: #004b8d;
 }
 
-main#chapter-1 .section:nth-of-type(4n+2) .fact__wrapper {
-  background-color: #5ECCB9;
+main#chapter-1 .section:nth-of-type(4n + 2) .fact__wrapper {
+  background-color: #5eccb9;
 }
 
-main#chapter-1 .section:nth-of-type(4n+3) .fact {
-  background-color: #FFB3DD;
+main#chapter-1 .section:nth-of-type(4n + 3) .fact {
+  background-color: #ffb3dd;
 }
 
-main#chapter-1 .section:nth-of-type(4n+3) .fact__wrapper {
-  background-color:  #004B8D;
+main#chapter-1 .section:nth-of-type(4n + 3) .fact__wrapper {
+  background-color: #004b8d;
 }
 ```
 
@@ -233,11 +239,11 @@ A looping color theme like the above is a subtly effective way to bring visual u
 
 ---
 
-*Check out Chapter 1 of “Powerful Patterns” [here](http://annualreport2016.youngfeministfund.org/chapter-1/) or the annual report in its entirety [here](http://annualreport2016.youngfeministfund.org/).*
+_Check out Chapter 1 of “Powerful Patterns” [here](http://annualreport2016.youngfeministfund.org/chapter-1/) or the annual report in its entirety [here](http://annualreport2016.youngfeministfund.org/)._
 
-*[FRIDA]: Flexibility Resources Inclusivity Diversity Action
-*[HTML]: Hypertext Markup Language
-*[CSS]: Cascading Style Sheets
-*[ID]: Identification
-*[URL]: Uniform Resource Locator
-*[DRY]: Don’t Repeat Yourself
+_[FRIDA]: Flexibility Resources Inclusivity Diversity Action
+_[HTML]: Hypertext Markup Language
+_[CSS]: Cascading Style Sheets
+_[ID]: Identification
+_[URL]: Uniform Resource Locator
+_[DRY]: Don’t Repeat Yourself

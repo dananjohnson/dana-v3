@@ -1,0 +1,16 @@
+---
+title: Screenshot Garden
+tags:
+  - nav
+permalink: "/screenshot-garden/{{ pagination.pageNumber + 1 }}/index.html"
+pagination:
+  data: collections.screenshots
+  size: 10
+  alias: screenshots
+---
+{% block content %}
+  {% for item in screenshots %}
+    {% image "./src/assets/images/screenshots/" ~ item.data.filename, item.data.alt %}
+  {% endfor %}
+  {% include "partials/components/pagination.njk" %}
+{% endblock %}

@@ -1,0 +1,17 @@
+---
+title: Notes
+tags:
+  - nav
+permalink: "/notes/{{ pagination.pageNumber + 1 }}/index.html"
+pagination:
+  data: collections.notes
+  size: 5
+  alias: notes
+---
+
+{% block content %}
+  {% for item in notes %}
+    {% include "partials/components/preview.njk" %}
+  {% endfor %}
+  {% include "partials/components/pagination.njk" %}
+{% endblock %}
