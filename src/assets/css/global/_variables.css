@@ -1,0 +1,21 @@
+:root {
+  --color: hsl(60, 100%, 100%);
+  --bg-color: hsl(247, 24%, 7%);
+  --accent-color: hsl(32, 100%, 51%);
+  --accent-color-secondary: hsl(7, 86%, 62%);
+  --accent-color-tertiary: hsl(339, 78%, 55%);
+  --neutral-color-10: hsl(247, 24%, 88%);
+  --neutral-color-30: hsl(247, 18%, 70%);
+
+  --root-font-stack: "Recursive", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  /* Recursive font variation */
+  --font-mono: 1;
+  --font-casl: 0.5;
+  --font-wght: 350;
+  --font-slnt: 0;
+  --font-crsv: 0.5;
+
+  --content-ideal-width: 65ch;
+  --content-min-width: 28rem;
+  --sidebar-min-width: 10rem;
+}

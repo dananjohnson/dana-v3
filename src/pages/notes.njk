@@ -1,17 +1,15 @@
 ---
 title: Notes
+layout: index
 tags:
   - nav
 permalink: "/notes/{{ pagination.pageNumber + 1 }}/index.html"
 pagination:
   data: collections.notes
-  size: 5
+  size: 10
   alias: notes
 ---
 
-{% block content %}
-  {% for item in notes %}
-    {% include "partials/components/preview.njk" %}
-  {% endfor %}
-  {% include "partials/components/pagination.njk" %}
-{% endblock %}
+{% for item in notes %}
+  {% include "partials/components/note.njk" %}
+{% endfor %}

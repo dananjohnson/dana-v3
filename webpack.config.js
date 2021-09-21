@@ -2,7 +2,6 @@ const path = require("path");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const postcssImport = require("postcss-import");
-const postcssNormalize = require("postcss-normalize");
 const postcssPresetEnv = require("postcss-preset-env");
 
 const entry = "./src/assets/main.js";
@@ -28,9 +27,12 @@ const cssRule = {
             postcssImport({
               from: "./src/assets/css/index.css",
             }),
-            postcssNormalize(),
             postcssPresetEnv({
-              stage: 3,
+              stage: 2,
+              features: {
+                "logical-properties-and-values": false,
+                "nesting-rules": true
+              },
             }),
           ],
         },
@@ -47,10 +49,11 @@ const jsRule = {
   },
 };
 
-const fileRule = {
-  test: /\.(png|jpe?g|gif|woff|woff2)$/i,
-  use: {
-    loader: "file-loader",
+const fontRule = {
+  test: /\.(woff2)$/i,
+  type: "asset/resource",
+  generator: {
+    filename: `fonts/${isDev ? "[name][ext]" : "[hash][ext][query]"}`,
   },
 };
 
@@ -64,7 +67,7 @@ module.exports = {
     publicPath: "/assets/",
   },
   module: {
-    rules: [cssRule, jsRule, fileRule],
+    rules: [cssRule, jsRule, fontRule],
   },
   plugins: [
     new WebpackManifestPlugin(),
@@ -72,4 +75,7 @@ module.exports = {
       filename: isDev ? "[name].css" : "[name].[contenthash].css",
     }),
   ],
+  stats: {
+    children: true,
+  },
 };

@@ -1,0 +1,91 @@
+* {
+  font-variation-settings: 
+    "MONO" var(--font-mono),
+    "CASL" var(--font-casl),
+    "wght" var(--font-wght),
+    "slnt" var(--font-slnt),
+    "CRSV" var(--font-crsv);
+}
+
+body {
+  font-family: var(--root-font-stack);
+  font-synthesis: none;
+  line-height: 1.5;
+}
+
+h1,
+h3,
+h4,
+h5 {
+  --font-mono: 0;
+  --font-casl: 0.25;
+  --font-wght: 900;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  --font-mono: 0.75;
+  --font-casl: 0.5;
+  --font-wght: 700;
+  --font-slnt: -15;
+
+  font-size: 1.5rem;
+}
+
+h3,
+h4,
+h5 {
+  font-size: 1.2rem;
+}
+
+ul {
+  padding-inline-start: 1em;
+}
+
+ol {
+  padding-inline-start: 2em;
+}
+
+li::marker {
+  color: var(--accent-color-secondary);
+}
+
+blockquote {
+  --font-slnt: -15;
+
+  position: relative;
+  margin-inline-start: 0.5rem;
+  padding-inline-start: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--neutral-color-10);
+
+  &::before {
+    position: absolute;
+    inset-block-start: 0.6ex;
+    inset-inline-start: 0;
+    block-size: calc(100% - 1ex);
+    inline-size: 0.25rem;
+    background: linear-gradient(to bottom, var(--accent-color-secondary), var(--accent-color-tertiary));
+    display: block;
+    content: "";
+  }
+}
+
+em,
+i,
+time {
+  --font-slnt: -14;
+  --font-casl: 1;
+}
+
+b,
+strong {
+  --font-wght: 800;
+}
+
+time {
+  color: var(--neutral-color-30);
+}

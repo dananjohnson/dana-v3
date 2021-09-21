@@ -1,0 +1,9 @@
+.block {
+  & > * + * {
+    margin-block-start: 1rem;
+  }
+
+  & time + * {
+    margin-block-start: 0.5rem;
+  }
+}

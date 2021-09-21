@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "Recursive";
+  src: url("../fonts/recursive_latin-basic-subset.woff2") format("woff2-variations");
+  font-weight: 400 900;
+}

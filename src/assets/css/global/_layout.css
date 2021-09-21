@@ -1,0 +1,29 @@
+body {
+  max-width: calc(var(--content-ideal-width) + 2 * var(--sidebar-min-width));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+  margin-inline: auto;
+  padding-block: 4rem;
+
+  & > header,
+  & > aside {
+    position: sticky;
+    inset-block-start: 0;
+    flex-grow: 1;
+    flex-basis: var(--sidebar-min-width);
+  }
+
+  & > main {
+    flex-grow: 666;
+    flex-basis: 0;
+    min-width: var(--content-min-width);
+  }
+
+  & > footer {
+    flex-grow: 1;
+    flex-basis: 100%;
+    margin-block-start: 4rem;
+  }
+}

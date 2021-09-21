@@ -18,6 +18,7 @@ module.exports = function (config) {
   // Layout aliases
   config.addLayoutAlias("page", "layouts/page.njk");
   config.addLayoutAlias("post", "layouts/post.njk");
+  config.addLayoutAlias("index", "layouts/index.njk");
 
   // Shortcodes
   config.addNunjucksAsyncShortcode("webpack", shortcodes.webpack);

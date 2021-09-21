@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
   {% include "partials/globals/head/index.njk" %}
 
@@ -9,6 +9,10 @@
       {% block content %}
       {% endblock %}
     </main>
+    <aside>
+      {% block aside %}
+      {% endblock %}
+    </aside>
     {% include "partials/globals/footer.njk" %}
     <script async defer src="{% webpack 'main.js' %}"></script>
   </body>

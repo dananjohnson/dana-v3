@@ -1,2 +1,3 @@
-@import "_base.css";
-@import "_code.css";
+@import "global/index.css";
+@import "components/index.css";
+@import "utility/index.css";

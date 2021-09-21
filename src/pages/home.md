@@ -1,8 +1,6 @@
 ---
 title: Home
 permalink: /
-tags:
-  - nav
 ---
 
 # Dana Johnson

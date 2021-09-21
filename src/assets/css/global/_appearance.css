@@ -1,0 +1,9 @@
+:root {
+  color: var(--color);
+  background-color: var(--bg-color);
+  accent-color: var(--accent-color);
+}
+
+a {
+  color: var(--accent-color);
+}
