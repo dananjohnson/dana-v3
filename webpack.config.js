@@ -57,6 +57,14 @@ const fontRule = {
   },
 };
 
+const iconRule = {
+  test: /\.(ico|svg)$/i,
+  type: "asset/resource",
+  generator: {
+    filename: "[name][ext]",
+  },
+};
+
 module.exports = {
   mode: isDev ? "development" : "production",
   devtool: isDev ? "cheap-module-source-map" : "source-map",
@@ -67,7 +75,7 @@ module.exports = {
     publicPath: "/assets/",
   },
   module: {
-    rules: [cssRule, jsRule, fontRule],
+    rules: [cssRule, jsRule, fontRule, iconRule],
   },
   plugins: [
     new WebpackManifestPlugin(),

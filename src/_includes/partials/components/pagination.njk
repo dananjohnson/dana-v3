@@ -1,18 +1,34 @@
-<nav aria-label="Pagination">
-  <ol>
-	<li>
-		{% if pagination.href.previous %}
-			<a href="{{ pagination.href.previous }}">Previous</a>
-		{% else %}
-			<span>Previous</span>
-		{% endif %}
-	</li>
-	<li>
-		{% if pagination.href.next %}
-			<a href="{{ pagination.href.next }}">Next</a>
-		{% else %}
-			<span>Next</span>
-		{% endif %}
-	</li>
-  </ol>
+{% macro link(href, direction="prev") %}
+	<a href="{{ href }}" class="pagination__item pagination__item--{{ direction }}">
+			<span>{{ "👈" if direction == "prev" else "" }}</span>
+			<span>{{ "Next" if direction == "next" else "Prev" }}</span>
+			<span>{{ "👉" if direction == "next" else "" }}</span>
+		</a>
+{% endmacro %}
+
+{% macro nonlink(direction="prev") %}
+	<span aria-hidden class="pagination__item pagination__item--{{ direction }}">
+			<span>{{ "✋" if direction == "prev" else "" }}</span>
+			<span>{{ "Next" if direction == "next" else "Prev" }}</span>
+			<span>{{ "✋" if direction == "next" else "" }}</span>
+		</a>
+{% endmacro %}
+
+<nav aria-label="Pagination" class="pagination">
+  <ul>
+		<li>
+			{% if pagination.href.previous %}
+				{{ link(pagination.href.previous) }}
+			{% else %}
+				{{ nonlink() }}
+			{% endif %}
+		</li>
+		<li>
+			{% if pagination.href.next %}
+				{{ link(pagination.href.next, "next") }}
+			{% else %}
+				{{ nonlink("next") }}
+			{% endif %}
+		</li>
+  </ul>
 </nav>

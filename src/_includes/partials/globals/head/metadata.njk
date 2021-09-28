@@ -1,2 +1,7 @@
-<title>{{ site.title }}</title>
+<title>{{ site.title ~ " | " ~ title if title != site.title else site.title }}</title>
 <meta name="description" content="{{ site.description }}">
+<meta name="language" content="en-US">
+<meta name="og:url" content="{{ site.url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta name="og:type" content="website">
+<meta name="theme-color" content="hsl(247, 24%, 7%)">

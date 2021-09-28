@@ -1,0 +1,252 @@
+{
+  "blogs": [
+    {
+      "title": "Adactio",
+      "url": "https://adactio.com/"
+    },
+    {
+      "title": "Adrian Roselli",
+      "url": "http://adrianroselli.com"
+    },
+    {
+      "title": "Alex Russell: Infrequently Noted",
+      "url": "https://infrequently.org"
+    },
+    {
+      "title": "A List Apart",
+      "url": "https://alistapart.com"
+    },
+    {
+      "title": "All My Stars",
+      "url": "https://jomc.substack.com"
+    },
+    {
+      "title": "Articles & Experiments by Roman Komarov on kizu.ru",
+      "url": "https://www.kizu.ru/"
+    },
+    {
+      "title": "A Working Library",
+      "url": "http://aworkinglibrary.com/feed/index.xml"
+    },
+    {
+      "title": "Baldur Bjarnason",
+      "url": "https://www.baldurbjarnason.com/"
+    },
+    {
+      "title": "Blog - Walnut Schoolhouse",
+      "url": "https://www.walnutschoolhouse.com/blog/"
+    },
+    {
+      "title": "Brad Frost",
+      "url": "http://bradfrost.com"
+    },
+    {
+      "title": "Brian Kardell",
+      "url": "http://bkardell.com/"
+    },
+    {
+      "title": "Craig Mod",
+      "url": "https://craigmod.com/"
+    },
+    {
+      "title": "CSS In Real Life",
+      "url": "https://css-irl.info/"
+    },
+    {
+      "title": "CSS-Tricks",
+      "url": "https://css-tricks.com"
+    },
+    {
+      "title": "CSS Wizardry",
+      "url": "https://csswizardry.com/"
+    },
+    {
+      "title": "Dan McKinley",
+      "url": "https://mcfunley.com/"
+    },
+    {
+      "title": "Dan Rudmann",
+      "url": "https://danrudmann.com/"
+    },
+    {
+      "title": "daverupert.com",
+      "url": "http://daverupert.com"
+    },
+    {
+      "title": "Ethan Marcotte",
+      "url": "https://ethanmarcotte.com"
+    },
+    {
+      "title": "Flicker Fusion",
+      "url": "http://flickerfusion.com/"
+    },
+    {
+      "title": "Frank Chimero",
+      "url": "https://www.frankchimero.com/"
+    },
+    {
+      "title": "hiddedevries.nl Blog",
+      "url": "https://hiddedevries.nl/en/blog/"
+    },
+    {
+      "title": "Hugo “Kitty” Giraudel",
+      "url": "https://hugogiraudel.com/"
+    },
+    {
+      "title": "Hundred Rabbits",
+      "url": "https://100r.co/blog"
+    },
+    {
+      "title": "Idle Words",
+      "url": "http://idlewords.com"
+    },
+    {
+      "title": "Interconnected",
+      "url": "http://interconnected.org/home"
+    },
+    {
+      "title": "Jake Archibald’s Blog",
+      "url": "http://jakearchibald.com/"
+    },
+    {
+      "title": "Jim Nielsen’s Blog",
+      "url": "https://blog.jim-nielsen.com"
+    },
+    {
+      "title": "Josh Comeau’s blog",
+      "url": "https://joshwcomeau.com/"
+    },
+    {
+      "title": "Keith J. Grant",
+      "url": "https://keithjgrant.com/posts/index.xml"
+    },
+    {
+      "title": "Kicks Condor",
+      "url": "https://www.kickscondor.com/"
+    },
+    {
+      "title": "Lea Verou",
+      "url": "https://lea.verou.me"
+    },
+    {
+      "title": "macwright.org",
+      "url": "https://macwright.org"
+    },
+    {
+      "title": "Matt Wilcox, Web Developer & Tinkerer (Web Development Feed)",
+      "url": "https://mattwilcox.net/"
+    },
+    {
+      "title": "Max Böck - Frontend Web Developer",
+      "url": "https://mxb.at"
+    },
+    {
+      "title": "maya.land",
+      "url": "https://maya.land/"
+    },
+    {
+      "title": "Miriam Eric Suzanne",
+      "url": "https://www.miriamsuzanne.com/"
+    },
+    {
+      "title": "Next.js Blog",
+      "url": "https://nextjs.org"
+    },
+    {
+      "title": "N O D E",
+      "url": "https://N-O-D-E.net"
+    },
+    {
+      "title": "Overreacted",
+      "url": "https://overreacted.io"
+    },
+    {
+      "title": "Piccalilli",
+      "url": "https://piccalil.li/"
+    },
+    {
+      "title": "Rachel Andrew",
+      "url": "http://rachelandrew.co.uk/archives"
+    },
+    {
+      "title": "rntz’s blog",
+      "url": "http://www.rntz.net/"
+    },
+    {
+      "title": "Robin Rendle",
+      "url": "http://robinrendle.com/"
+    },
+    {
+      "title": "Robin Sloan’s blog",
+      "url": "http://www.robinsloan.com/notes"
+    },
+    {
+      "title": "ROUGH TYPE",
+      "url": "http://www.roughtype.com"
+    },
+    {
+      "title": "@samplereality",
+      "url": "https://www.samplereality.com"
+    },
+    {
+      "title": "Sara Soueidan",
+      "url": "https://sarasoueidan.com/blog/"
+    },
+    {
+      "title": "Scott O’Hara UX developer, designer & accessibility engineer",
+      "url": "http://scottohara.me/"
+    },
+    {
+      "title": "Shady Characters",
+      "url": "https://shadycharacters.co.uk"
+    },
+    {
+      "title": "ShopTalk",
+      "url": "https://shoptalkshow.com"
+    },
+    {
+      "title": "Snakes and Ladders",
+      "url": "https://blog.ayjay.org/"
+    },
+    {
+      "title": "Snook.ca",
+      "url": "https://snook.ca/"
+    },
+    {
+      "title": "Tim Kadlec",
+      "url": "https://timkadlec.com/"
+    },
+    {
+      "title": "Zach Leatherman",
+      "url": "https://www.zachleat.com/web/"
+    },
+    {
+      "title": "Song Exploder",
+      "url": "http://www.songexploder.net"
+    },
+    {
+      "title": "Ben Frain",
+      "url": "https://benfrain.com/"
+    },
+    {
+      "title": "Benjamin Willems",
+      "url": "https://benjaminwil.info"
+    },
+    {
+      "title": "Chris Shiflett",
+      "url": "http://shiflett.org/"
+    },
+    {
+      "title": "Kahlil Lechelt",
+      "url": "https://www.kahlillechelt.com/"
+    },
+    {
+      "title": "Matt Steele",
+      "url": "https://steele.blue/"
+    },
+    {
+      "title": "Rob Weychert",
+      "url": "http://v6.robweychert.com/blog/"
+    }
+  ]
+}

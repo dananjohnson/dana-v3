@@ -1,9 +1,29 @@
-:root {
+body {
   color: var(--color);
   background-color: var(--bg-color);
   accent-color: var(--accent-color);
 }
 
-a {
-  color: var(--accent-color);
+[href] {
+  text-decoration: var(--text-decoration);
+  color: inherit;
+  transition: text-decoration-color var(--transition-duration) var(--transition-timing-function); 
+
+  &:hover {
+    text-decoration-color: var(--text-decoration-hover-color);
+  }
+
+  &:focus {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 1px;
+  }
+}
+
+picture {
+  padding: 3rem;
+  background-color: white;
+
+  & img {
+    margin-inline: auto;
+  }
 }

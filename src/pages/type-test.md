@@ -1,8 +1,6 @@
 ---
 title: Type test
 permalink: /type-test/index.html
-tags:
-  - nav
 ---
 
 # This is an h1
@@ -31,6 +29,7 @@ This is a paragraph. Hey, you know how I'm, like, always trying to *save the pla
 ```
 
 ```css
+/* a comment */
 body {
   font-family: var(--root-font-stack);
   font-synthesis: none;
@@ -38,7 +37,7 @@ body {
 }
 ```
 
-```js
+```js/2-3
 function foo(param) {
   if (!param) return true;
   return false;

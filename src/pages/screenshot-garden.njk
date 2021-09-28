@@ -1,17 +1,15 @@
 ---
 title: Screenshot Garden
 layout: index
-tags:
-  - nav
 permalink: "/screenshot-garden/{{ pagination.pageNumber + 1 }}/index.html"
 pagination:
   data: collections.screenshots
   size: 10
   alias: screenshots
 ---
-{% block content %}
-  {% for item in screenshots %}
-    {% image "./src/assets/images/screenshots/" ~ item.data.filename, item.data.alt %}
-  {% endfor %}
-  {% include "partials/components/pagination.njk" %}
-{% endblock %}
+
+{% for item in screenshots %}
+  {% image "screenshots/" ~ item.data.filename, item.data.alt %}
+{% endfor %}
+
+<p><i>The screenshot garden is an idea taken from <a href="https://maya.land/screenshot-garden/">maya.land</a>, who got it from <a href="https://screenshot.garden/">this</a> and <a href="https://screenshot-garden.neocities.org/">this</a>. Apparently I’m not the only one who keeps a file of such treasures.</i></p>

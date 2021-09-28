@@ -1,0 +1,15 @@
+.rule-above {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    inset-block-start: calc(var(--list-gap) * -0.5);
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    inline-size: 4rem;
+    block-size: 1px;
+    background-color: var(--neutral-color-60);
+    display: block;
+    content: "";
+  }
+}

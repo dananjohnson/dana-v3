@@ -1,0 +1,31 @@
+.logo-link {
+  transform: translateY(0.625rem);
+}
+
+.logo {
+  inline-size: clamp(85px, 10.625vmax, 110px);
+  block-size: auto;
+  color: var(--neutral-color-30);
+  transition: color 0.2s ease;
+}
+
+.logo__text {
+  --font-casl: 1;
+  --font-wght: 600;
+  --font-slnt: 0;
+
+  fill: var(--bg-color);
+  font-size: 48px;
+  font-variant-caps: all-small-caps;
+  /* transition-property: var(--font-slnt) 0.2s ease; */
+}
+
+a:hover {
+  & .logo {
+    color: var(--color);
+  }
+
+  & .logo__text {
+    /* --font-slnt: -15; */
+  }
+}
