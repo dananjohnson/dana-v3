@@ -1,9 +1,13 @@
 .block {
   & > * + * {
-    margin-block-start: 1rem;
+    margin-block-start: 1em;
   }
 
   & time + * {
-    margin-block-start: 0.5rem;
+    margin-block-start: 0.5em;
+  }
+
+  & p > picture {
+    margin-block-start: 1.5em;
   }
 }

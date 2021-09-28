@@ -1,5 +1,10 @@
 .block-list {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: var(--list-gap);
+
+  & > :first-child::before {
+    /* hide rule above */
+    display: none;
+  }
 }

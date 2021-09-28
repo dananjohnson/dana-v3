@@ -1,0 +1,9 @@
+---
+title: Dana.zone
+permalink: /
+layout: home
+---
+
+{% for item in collections.latestNotes %}
+  {% include "partials/components/note.njk" %}
+{% endfor %}

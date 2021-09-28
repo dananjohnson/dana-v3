@@ -1,16 +1,15 @@
 {
-  "title": "Dana Johnson",
+  "title": "Dana.zone",
   "subtitle": "",
-  "description": "Front-end developer building purposeful, inclusive interfaces, and minimal, sustainable tools for creating and sharing knowledge on the open web.",
-  "url": "https://www.danajohnson.co",
+  "description": "",
+  "url": "https://dana.zone",
   "baseUrl": "",
   "repository": "https://github.com/dananjohnson/dana-v3",
   "typekit": "hhy2otg",
   "micropub_endpoint": "https://indiekit-danajohnson-co.herokuapp.com",
   "author": {
     "name": "Dana Johnson",
-    "url": "https://www.danajohnson.co",
-    "email": "dana@danajohnson.co",
+    "url": "https://dana.zone",
     "github": "https://github.com/dananjohnson/"
   },
   "license": {

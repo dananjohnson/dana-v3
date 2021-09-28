@@ -1,0 +1,12 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+<header class="sr-text">
+  <h1>{{ title }}</h1>
+</header>
+<div class="block-list">{{ content | safe }}</div>
+{% endblock %}
+
+{% block aside %}
+<a href="/notes/2">More notes 👉</a>
+{% endblock %}

@@ -1,0 +1,25 @@
+.pagination {
+  & ul {
+    list-style: none;
+  }
+}
+
+.pagination__item {
+  display: inline-grid;
+  grid-template-columns: 1rem max-content 1rem;
+  gap: 0.5rem;
+  text-decoration: none;
+
+  &[href] > *:not(:first-child):not(:last-child) {
+    text-decoration: var(--text-decoration);
+    transition: text-decoration-color var(--transition-duration) var(--transition-timing-function);
+  }
+
+  &[href]:hover > *:not(:first-child):not(:last-child) {
+    text-decoration-color: var(--text-decoration-hover-color);
+  }
+
+  & > :last-child {
+    align-self: end;
+  }
+}

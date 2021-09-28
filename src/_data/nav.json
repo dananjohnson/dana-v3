@@ -1,0 +1,30 @@
+{
+  "header": [
+    {
+      "title": "Notes",
+      "path": "/notes",
+      "paginated": true
+    },
+    {
+      "title": "Screenshot Garden",
+      "path": "/screenshot-garden",
+      "paginated": true
+    },
+    {
+      "title": "Blogroll",
+      "path": "/blogroll"
+    },
+    {
+      "title": "About",
+      "path": "/about"
+    },
+    {
+      "title": "RSS",
+      "path": "/feed.xml"
+    },
+    {
+      "title": "GitHub",
+      "path": "https://github.com/dananjohnson/"
+    }
+  ]
+}

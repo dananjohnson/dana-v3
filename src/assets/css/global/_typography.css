@@ -7,10 +7,22 @@
     "CRSV" var(--font-crsv);
 }
 
+html {
+  font-size: clamp(14px, 1.75vmax, 16px);
+}
+
 body {
   font-family: var(--root-font-stack);
   font-synthesis: none;
   line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
 }
 
 h1,
@@ -23,14 +35,13 @@ h5 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 h2 {
   --font-mono: 0.75;
   --font-casl: 0.5;
-  --font-wght: 700;
-  --font-slnt: -15;
+  --font-wght: 600;
 
   font-size: 1.5rem;
 }
@@ -49,8 +60,14 @@ ol {
   padding-inline-start: 2em;
 }
 
-li::marker {
-  color: var(--accent-color-secondary);
+li {
+  &::marker {
+    color: var(--accent-color-tertiary);
+  }
+
+  & + li {
+    margin-block-start: 0.2em;
+  }
 }
 
 blockquote {
@@ -88,4 +105,10 @@ strong {
 
 time {
   color: var(--neutral-color-30);
+}
+
+.sc {
+  --font-casl: 0;
+  font-size: 1.1em;
+  font-variant-caps: all-small-caps;
 }
