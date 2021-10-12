@@ -63,7 +63,7 @@ body {
     display: inherit;
     flex-wrap: inherit;
     margin-block: calc(var(--list-gap) * 0.5);
-    font-size: 0.86rem;
+    font-size: 0.875rem;
     color: var(--neutral-color-30);
 
     & > * {

@@ -1,6 +1,6 @@
-# Dana Johnson — Personal Website
+# Dana.zone
 
-My personal website (WIP!)—a static site built on [Eleventy](https://www.11ty.io/).
+My personal website—a static site built on [Eleventy](https://www.11ty.io/).
 
 ## License
 
