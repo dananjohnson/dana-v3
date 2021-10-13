@@ -2,7 +2,7 @@
   font-family: "Recursive";
   font-style: oblique -15deg 0deg;
   font-weight: 400 900;
-  font-display: optional;
+  font-display: swap;
   src: url("../fonts/Recursive_VF_1.079--subset_range_english_basic.woff2") format("woff2 supports variations"),
     url("../fonts/Recursive_VF_1.079--subset_range_english_basic.woff2") format("woff2-variations");
   unicode-range: U+0020-007F, U+00A9, U+2190-2193, U+2018, U+2019, U+201C, U+201D, U+2022;
