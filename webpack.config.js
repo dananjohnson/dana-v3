@@ -41,14 +41,6 @@ const cssRule = {
   ],
 };
 
-const jsRule = {
-  test: /\.m?js$/i,
-  exclude: /node_modules/,
-  use: {
-    loader: "babel-loader",
-  },
-};
-
 const fontRule = {
   test: /\.(woff2)$/i,
   type: "asset/resource",
@@ -75,7 +67,7 @@ module.exports = {
     publicPath: "/assets/",
   },
   module: {
-    rules: [cssRule, jsRule, fontRule, iconRule],
+    rules: [cssRule, fontRule, iconRule],
   },
   plugins: [
     new WebpackManifestPlugin(),
