@@ -5,7 +5,7 @@
   "url": "https://dana.zone",
   "baseUrl": "",
   "repository": "https://github.com/dananjohnson/dana-v3",
-  "micropub_endpoint": "https://indiekit-danajohnson-co.herokuapp.com",
+  "micropub_endpoint": "https://indiekit-dana-zone.herokuapp.com",
   "author": {
     "name": "Dana Johnson",
     "url": "https://dana.zone",
