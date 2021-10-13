@@ -1,7 +1,3 @@
-.logo-link {
-  transform: translateY(0.625rem);
-}
-
 .logo {
   inline-size: clamp(85px, 10.625vmax, 110px);
   block-size: auto;
@@ -20,12 +16,13 @@
   /* transition-property: var(--font-slnt) 0.2s ease; */
 }
 
-a:hover {
-  & .logo {
-    color: var(--color);
-  }
+.logo-link {
+  transform: translateY(0.625rem);
+  text-decoration: none;
 
-  & .logo__text {
-    /* --font-slnt: -15; */
+  &:hover {
+    & .logo {
+      color: var(--color);
+    }
   }
 }

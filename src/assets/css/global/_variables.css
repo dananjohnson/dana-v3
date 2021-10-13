@@ -14,7 +14,9 @@
   --transition-duration: 0.2s;
   --transition-timing-function: linear;
 
-  --text-decoration: underline 2px var(--accent-color);
+  --text-decoration-line: underline;
+  --text-decoration-thickness: 2px;
+  --text-decoration-color: var(--accent-color);
   --text-decoration-hover-color: var(--hover-color);
 
   --root-font-stack: "Recursive", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;

@@ -5,7 +5,9 @@ body {
 }
 
 [href] {
-  text-decoration: var(--text-decoration);
+  text-decoration-line: var(--text-decoration-line);
+  text-decoration-thickness: var(--text-decoration-thickness);
+  text-decoration-color: var(--text-decoration-color);
   color: inherit;
   transition: text-decoration-color var(--transition-duration) var(--transition-timing-function); 
 
