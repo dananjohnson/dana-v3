@@ -1,11 +1,9 @@
 {
-  "title": "Dana.zone",
-  "subtitle": "",
+  "title": "The Dana Zone",
   "description": "My little corner of the web. Pithy thoughts and link shares about frontend development and more.",
   "url": "https://dana.zone",
-  "baseUrl": "",
   "repository": "https://github.com/dananjohnson/dana-v3",
-  "micropub_endpoint": "https://indiekit-dana-zone.herokuapp.com",
+  "micropub_endpoint": "https://indiekit-dana-v3.herokuapp.com/micropub",
   "author": {
     "name": "Dana Johnson",
     "url": "https://dana.zone",
