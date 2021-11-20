@@ -11,9 +11,8 @@
   --font-slnt: 0;
 
   fill: var(--bg-color);
-  font-size: 48px;
-  font-variant-caps: all-small-caps;
-  /* transition-property: var(--font-slnt) 0.2s ease; */
+  font-size: 38px;
+  text-transform: uppercase;
 }
 
 .logo-link {
