@@ -5,7 +5,7 @@ permalink: /about/index.html
 
 ## About me
 
-I’m a frontend developer. In my [day job](https://castironcoding.com/), I’m mostly working with React and friends these days: Next.js, Styled Components, Graph[QL]{.sc}, and insert-[API]{.sc}-here. Deep down, I love the platform, and am particularly passionate about [HTML]{.sc}, [CSS]{.sc}, accessibility, and progressive enhancement.
+I’m a frontend developer. In my [day job](https://castironcoding.com/), I’m mostly working with React and friends these days: Next.js, Styled Components, Graph[QL]{.sc}, and insert-[API]{.sc}-here. Deep down, I love ✨The Platform✨, and am particularly passionate about [HTML]{.sc}, [CSS]{.sc}, accessibility, and progressive enhancement. Reach out anytime at dana at dana dot zone.
 
 ## Colophon
 
