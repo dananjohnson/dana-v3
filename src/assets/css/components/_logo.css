@@ -1,5 +1,5 @@
 .logo {
-  inline-size: clamp(85px, 10.625vmax, 110px);
+  inline-size: clamp(85px, 10.625vw, 110px);
   block-size: auto;
   color: var(--neutral-color-30);
   transition: color 0.2s ease;
