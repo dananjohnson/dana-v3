@@ -44,7 +44,7 @@
     "browserslist": "^4.21.4",
     "css-loader": "^6.7.1",
     "eleventy-plugin-error-overlay": "^1.0.0",
-    "luxon": "^3.0.4",
+    "luxon": "^3.2.1",
     "markdown-it-attrs": "^4.1.4",
     "markdown-it-bracketed-spans": "^1.0.1",
     "mini-css-extract-plugin": "^2.6.1",
