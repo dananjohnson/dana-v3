@@ -1,10 +1,10 @@
 :root {
-  --color: hsl(60, 100%, 100%);
+  --color: hsl(247, 24%, 97%);
   --bg-color: hsl(247, 24%, 7%);
   --accent-color: hsl(32, 100%, 51%);
   --accent-color-secondary: hsl(7, 86%, 62%);
   --accent-color-tertiary: hsl(339, 78%, 55%);
-  --neutral-color-10: hsl(247, 24%, 88%);
+  --neutral-color-10: hsl(247, 24%, 80%);
   --neutral-color-30: hsl(247, 18%, 70%);
   --neutral-color-60: hsl(247, 12%, 40%);
 
@@ -21,11 +21,11 @@
 
   --root-font-stack: "Recursive", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   /* Recursive font variation settings */
-  --font-mono: 1;
+  --font-mono: 0.85;
   --font-casl: 0.5;
-  --font-wght: 350;
+  --font-wght: 390;
   --font-slnt: 0;
-  --font-crsv: 0.5;
+  --font-crsv: 0.8;
 
   --content-ideal-width: 70ch;
   --content-min-width: 30rem;

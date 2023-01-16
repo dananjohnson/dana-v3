@@ -14,7 +14,7 @@ html {
 body {
   font-family: var(--root-font-stack);
   font-synthesis: none;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 h1,
@@ -29,13 +29,13 @@ h1,
 h3,
 h4,
 h5 {
-  --font-mono: 0;
+  --font-mono: 0.5;
   --font-casl: 0.25;
-  --font-wght: 900;
+  --font-wght: 750;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 
 h2 {
