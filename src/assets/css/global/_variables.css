@@ -30,5 +30,6 @@
   --content-ideal-width: 70ch;
   --content-min-width: 30rem;
   --sidebar-min-width: 8rem;
+  --gap: min(2vw, 1.5rem);
   --list-gap: 5rem;
 }

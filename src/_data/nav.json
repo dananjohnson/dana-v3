@@ -1,6 +1,10 @@
 {
   "header": [
     {
+      "title": "HOME",
+      "path": "/"
+    },
+    {
       "title": "Notes",
       "path": "/notes",
       "paginated": true
