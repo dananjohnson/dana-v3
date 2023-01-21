@@ -20,7 +20,6 @@ body {
     margin-inline: var(--gap);
     padding-block-start: min(2vw, 2.5rem);
     padding-block-end: var(--gap);
-    background-color: var(--bg-color);
   }
 
   @media (max-width: 578px) {

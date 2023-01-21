@@ -15,7 +15,9 @@ html {
 
 body {
   color: var(--color);
-  background-color: var(--bg-color);
+  background:
+    linear-gradient(90deg, var(--bg-color) 50%, var(--accent-color-tertiary) 400%),
+    var(--bg-color);
   accent-color: var(--accent-color);
 }
 
