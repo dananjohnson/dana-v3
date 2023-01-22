@@ -25,10 +25,6 @@
     {
       "title": "RSS",
       "path": "/feed.xml"
-    },
-    {
-      "title": "GitHub",
-      "path": "https://github.com/dananjohnson/"
     }
   ]
 }

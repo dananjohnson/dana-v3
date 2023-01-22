@@ -5,7 +5,7 @@ permalink: /about/index.html
 
 ## About me
 
-I’m a frontend developer. In my [day job](https://castironcoding.com/), I’m mostly working with React and friends these days. Deep down, I love ✨The Platform✨, and am particularly passionate about [HTML]{.sc}, [CSS]{.sc}, accessibility, and progressive enhancement. Reach out anytime at dana at dana dot zone.
+I’m a frontend developer. In my [day job](https://castironcoding.com/), I’m mostly working with React and friends these days. Deep down, I love ✨The Web Platform✨, and am particularly passionate about [HTML]{.sc}, [CSS]{.sc}, accessibility, and progressive enhancement. Reach out anytime at dana at dana dot zone. You can also find me on [Mastodon]({{ site.author.mastodon }}) and [GitHub]({{ site.author.github }}).
 
 ## Colophon
 
