@@ -1,0 +1,36 @@
+{% macro link(href, direction="prev") %}
+	<a href="{{ href }}" class="pagination__item pagination__item--{{ direction }}">
+			<span>{{ "👈" if direction == "prev" else "" }}</span>
+			<span>{{ "Next note" if direction == "next" else "Prev note" }}</span>
+			<span>{{ "👉" if direction == "next" else "" }}</span>
+		</a>
+{% endmacro %}
+
+{% macro nonlink(direction="prev") %}
+	<span aria-hidden class="pagination__item pagination__item--{{ direction }}">
+			<span>{{ "✋" if direction == "prev" else "" }}</span>
+			<span>{{ "Next note" if direction == "next" else "Prev note" }}</span>
+			<span>{{ "✋" if direction == "next" else "" }}</span>
+		</a>
+{% endmacro %}
+
+<nav aria-label="Previous/Next post" class="pagination">
+  <ul>
+		<li>
+			{% set previous = collections.notes | getPreviousCollectionItem(page) %}
+			{% if previous %}
+				{{ link(previous.url) }}
+			{% else %}
+				{{ nonlink() }}
+			{% endif %}
+		</li>
+		<li>
+			{% set next = collections.notes | getNextCollectionItem(page) %}
+			{% if next %}
+				{{ link(next.url, "next") }}
+			{% else %}
+				{{ nonlink("next") }}
+			{% endif %}
+		</li>
+  </ul>
+</nav>
