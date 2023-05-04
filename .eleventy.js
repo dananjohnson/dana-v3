@@ -2,6 +2,7 @@ const path = require("path");
 const markdownIt = require("markdown-it");
 const markdownItBracketedSpans = require("markdown-it-bracketed-spans");
 const markdownItAttrs = require("markdown-it-attrs");
+const markdownItFootnote = require("markdown-it-footnote");
 const SyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const ErrorOverlay = require("eleventy-plugin-error-overlay");
 const Rss = require("@11ty/eleventy-plugin-rss");
@@ -48,7 +49,8 @@ module.exports = function (config) {
   };
   const markdownLib = markdownIt(mdOptions)
     .use(markdownItBracketedSpans)
-    .use(markdownItAttrs, attrsOptions);
+    .use(markdownItAttrs, attrsOptions)
+    .use(markdownItFootnote);
 
   config.setLibrary("md", markdownLib);
 
