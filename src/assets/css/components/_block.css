@@ -7,6 +7,10 @@
     margin-block-start: 0.5em;
   }
 
+  & * + hr {
+    margin-block-start: 2em;
+  }
+
   & p > picture {
     margin-block-start: 1.5em;
   }

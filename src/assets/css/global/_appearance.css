@@ -38,6 +38,22 @@ body {
   }
 }
 
+details {
+  color: var(--neutral-color-10);
+}
+
+summary {
+  color: var(--accent-color);
+}
+
+time {
+  color: var(--neutral-color-30);
+}
+
+hr {
+  border-color: var(--neutral-color-30);
+}
+
 picture {
   padding: 3rem;
   background-color: white;
@@ -45,4 +61,8 @@ picture {
   & img {
     margin-inline: auto;
   }
+}
+
+sup [href] {
+  color: var(--accent-color);
 }

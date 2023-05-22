@@ -1,5 +1,7 @@
 body {
-  max-width: calc(var(--content-ideal-width) + 2 * var(--sidebar-min-width) + 2 * var(--gap));
+  max-width: calc(
+    var(--content-ideal-width) + 2 * var(--sidebar-min-width) + 2 * var(--gap)
+  );
   display: flex;
   flex-wrap: wrap;
   row-gap: var(--gap);
@@ -36,7 +38,7 @@ body {
 
     & ul {
       columns: 150px;
-      column-gap: var(--gap); 
+      column-gap: var(--gap);
     }
   }
 
@@ -49,6 +51,7 @@ body {
   & > main {
     flex-grow: 666;
     flex-basis: var(--content-min-width);
+    max-inline-size: var(--content-max-width);
     margin-inline: var(--gap);
     margin-block-end: calc(var(--list-gap) * 0.5);
   }
@@ -79,4 +82,12 @@ body {
 
 main > header {
   margin-block-end: 2.5rem;
+}
+
+time {
+  display: block;
+}
+
+summary + * {
+  margin-block-start: 1em;
 }

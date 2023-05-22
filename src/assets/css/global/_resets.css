@@ -49,8 +49,7 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
+:where(ul[class], ol[class]) {
   list-style: none;
 }
 
@@ -93,7 +92,7 @@ svg {
 details summary {
   cursor: pointer;
 
-  > * {
+  & > * {
     display: inline;
   }
 }

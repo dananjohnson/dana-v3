@@ -1,14 +1,11 @@
 * {
-  font-variation-settings: 
-    "MONO" var(--font-mono),
-    "CASL" var(--font-casl),
-    "wght" var(--font-wght),
-    "slnt" var(--font-slnt),
-    "CRSV" var(--font-crsv);
+  font-variation-settings: "MONO" var(--font-mono), "CASL" var(--font-casl),
+    "wght" var(--font-wght), "slnt" var(--font-slnt), "CRSV" var(--font-crsv);
 }
 
 html {
   font-size: clamp(14px, 1.75vw, 16px);
+  text-underline-position: from-font;
 }
 
 body {
@@ -85,7 +82,11 @@ blockquote {
     inset-inline-start: 0;
     block-size: calc(100% - 1ex);
     inline-size: 0.25rem;
-    background: linear-gradient(to bottom, var(--accent-color-secondary), var(--accent-color-tertiary));
+    background: linear-gradient(
+      to bottom,
+      var(--accent-color-secondary),
+      var(--accent-color-tertiary)
+    );
     display: block;
     content: "";
   }
@@ -103,8 +104,28 @@ strong {
   --font-wght: 800;
 }
 
-time {
-  color: var(--neutral-color-30);
+summary {
+  --font-mono: 0.75;
+  --font-casl: 0.5;
+  --font-wght: 600;
+
+  font-size: 1.2rem;
+}
+
+sup {
+  font-size: 80%;
+  inset-block-start: -0.35em;
+
+  & a {
+    text-underline-offset: 0.1em;
+  }
+}
+
+@supports (font-variant-position: super) {
+  sup {
+    all: inherit;
+    font-variant-position: super;
+  }
 }
 
 .sc {

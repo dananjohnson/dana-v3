@@ -15,7 +15,7 @@
   --transition-timing-function: linear;
 
   --text-decoration-line: underline;
-  --text-decoration-thickness: 2px;
+  --text-decoration-thickness: 0.1em;
   --text-decoration-color: var(--accent-color);
   --text-decoration-hover-color: var(--hover-color);
 
@@ -27,8 +27,9 @@
   --font-slnt: 0;
   --font-crsv: 0.8;
 
-  --content-ideal-width: 70ch;
-  --content-min-width: 30rem;
+  --content-ideal-width: 80ch;
+  --content-min-width: 35rem;
+  --content-max-width: min(100%, 40rem);
   --sidebar-min-width: 8rem;
   --gap: min(2vw, 1.5rem);
   --list-gap: 5rem;

@@ -1,0 +1,12 @@
+.footnotes {
+  color: var(--neutral-color-10);
+  font-size: 0.9em;
+}
+
+.footnotes-list {
+  list-style: revert;
+}
+
+.footnote-backref {
+  color: var(--accent-color);
+}

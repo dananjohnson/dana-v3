@@ -23,15 +23,13 @@ pre {
   overflow: auto;
 }
 
-:not(pre) > code,
 pre {
-  background: #111b27;
+  background: #00000080;
 }
 
 /* Inline code */
 :not(pre) > code {
-  padding: 0.1em 0.3em;
-  border-radius: 0.3em;
+  color: var(--accent-color);
   white-space: normal;
 }
 
