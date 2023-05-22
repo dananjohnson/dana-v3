@@ -1,5 +1,9 @@
 <article class="block rule-above">
   <h2><a href={{ item.url }}>{{ item.data.title }}</a></h2>
   <time datetime="{{ item.date | w3Date }}">{{ item.date | displayDate }}</time>
-  {{ item.templateContent | safe | truncate(500) }}
+  {% if item.data.summary %}
+    <p>{{ item.data.summary | safe }}</p>
+  {% else %}
+    {{ item.templateContent | safe | truncate(500) }}
+  {% endif %}
 </article>
