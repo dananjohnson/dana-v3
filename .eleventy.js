@@ -4,7 +4,6 @@ const markdownItBracketedSpans = require("markdown-it-bracketed-spans");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require("markdown-it-footnote");
 const SyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const ErrorOverlay = require("eleventy-plugin-error-overlay");
 const Rss = require("@11ty/eleventy-plugin-rss");
 
 const filters = require("./lib/filters");
@@ -31,7 +30,6 @@ module.exports = function (config) {
 
   // Plugins
   config.addPlugin(SyntaxHighlight);
-  config.addPlugin(ErrorOverlay);
   config.addPlugin(Rss);
 
   // Custom collections
