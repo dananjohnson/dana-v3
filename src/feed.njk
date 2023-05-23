@@ -33,6 +33,7 @@
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ note.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
+    {% if note.data.summary %}<summary>{{ note.data.summary }}</summary>{% endif %}
     <content type="html">{{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {%- endfor %}
