@@ -9,7 +9,7 @@
 code,
 pre {
   background: none;
-  white-space: pre;
+  white-space: pre-wrap;
   tab-size: 4;
   hyphens: none;
 
@@ -20,7 +20,6 @@ pre {
 
 pre {
   padding: 1rem;
-  overflow: auto;
 }
 
 pre {
