@@ -55,11 +55,11 @@ hr {
 }
 
 picture {
-  padding: 3rem;
-  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
 
-  & img {
-    margin-inline: auto;
+  img {
+    width: 100%;
   }
 }
 
