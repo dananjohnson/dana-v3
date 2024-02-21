@@ -30,11 +30,11 @@
     ]
   },
   "scripts": {
-    "clean": "rimraf dist",
-    "start": "npm-run-all -l clean --parallel start:*",
+    "clean": "rm -rf dist",
+    "start": "yarn clean && yarn start:webpack & yarn start:eleventy",
     "start:webpack": "NODE_ENV=development webpack --watch",
     "start:eleventy": "NODE_ENV=development eleventy --serve --quiet",
-    "build": "npm-run-all -l clean build:*",
+    "build": "yarn clean && yarn build:webpack && yarn build:eleventy",
     "build:webpack": "NODE_ENV=production webpack",
     "build:eleventy": "NODE_ENV=production eleventy",
     "browserslist:update": "npx update-browserslist-db@latest"
@@ -63,5 +63,6 @@
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-manifest-plugin": "^5.0.0"
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
