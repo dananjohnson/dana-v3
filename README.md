@@ -7,3 +7,4 @@ My online home. Built on [Eleventy](https://www.11ty.io/); assets generated usin
 ## License
 
 [CC-BY](https://creativecommons.org/licenses/by/4.0/) by Dana Johnson.
+
