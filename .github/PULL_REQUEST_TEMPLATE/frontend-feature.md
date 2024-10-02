@@ -19,9 +19,10 @@ Before requesting a review, you should review this checklist and address any req
 
 - [ ] I have used semantic HTML wherever necessary on the feature.
 - [ ] I have run an automated a11y checker (like [Accessibility Insights for Web](https://accessibilityinsights.io/)) and fixed any issues.
-- [ ] I have implemented the feature faithfully to design.
+- [ ] I have implemented the feature faithfully to design. (add something about PE)
 - [ ] I have implemented the feature responsively. If mobile designs don't exist, I've used my best judgment to provide a good mobile experience. I have also considered intermediate viewport sizes and styled elements to scale and flow fluidly.
 - [ ] I have tested that the feature can support content of varying lengths, not just lorem ipsum or what's shown in design.
+- [ ] I have localized any hard-coded text strings.
 - [ ] I have tested the feature in a production build, not just in local development.
 
 ## Screenshots (optional)
